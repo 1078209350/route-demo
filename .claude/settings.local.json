@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m router.main)",
+      "Bash(pip3 install pyyaml)",
+      "Bash(PYTHONPATH=/Users/guantong/Desktop/练习/python/路由统一 python3 -m router.main 2>&1)",
+      "WebFetch(domain:minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com)",
+      "Bash(cd /Users/guantong/Desktop/练习/python/路由统一/router && python main.py 2>&1)",
+      "Bash(cd /Users/guantong/Desktop/练习/python/路由统一/router && python3 main.py 2>&1)",
+      "Bash(MINIMAX_API_KEY=\"sk-cp-Ob-agizc1tNupbOVEpiK0X3j4KCCAaGt_pIgwRt7cR8ZIfEONKuWkgVNkLXFxE7HFDVJvyH-g4dMPW9IzeB_BhG900URx4OKjXcijT5-uIP3CsMTo7s-d1g\" python3 -m router.main 2>&1 | head -50)",
+      "Bash(MINIMAX_API_KEY=\"sk-cp-Ob-agizc1tNupbOVEpiK0X3j4KCCAaGt_pIgwRt7cR8ZIfEONKuWkgVNkLXFxE7HFDVJvyH-g4dMPW9IzeB_BhG900URx4OKjXcijT5-uIP3CsMTo7s-d1g\" python3 -m router.main 2>&1 | head -30)",
+      "Bash(pip show fastapi 2>/dev/null | head -5)",
+      "Bash(pip show uvicorn 2>/dev/null | head -5)"
+    ]
+  }
+}

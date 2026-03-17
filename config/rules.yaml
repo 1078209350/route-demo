@@ -1,0 +1,66 @@
+# 问题分类规则配置
+# 支持三种匹配方式: keyword(关键词), prefix(前缀), regex(正则)
+# matchers之间的逻辑: all(与-全部匹配) 或 any(或-任一匹配)
+
+rules:
+  - category: TOOL
+    name: 工具类规则
+    priority: 10
+    matchers:
+      - type: keyword
+        logic: any
+        values: ["锤子", "螺丝刀", "扳手", "钳子", "锯子", "工具", "刀具", "钻头", "螺丝", "钉子"]
+      - type: prefix
+        logic: any
+        values: ["如何修", "怎么用", "工具"]
+
+  - category: CONTAINER
+    name: 容器类规则
+    priority: 10
+    matchers:
+      - type: keyword
+        logic: any
+        values: ["盒子", "箱子", "瓶子", "罐子", "桶", "容器", "包装", "袋子", "箱子"]
+
+  - category: DECORATION
+    name: 装饰品类规则
+    priority: 10
+    matchers:
+      - type: keyword
+        logic: any
+        values: ["花", "植物", "盆栽", "画", "雕像", "装饰", "挂件", "摆件", "灯", "地毯", "窗帘"]
+
+  - category: CONSUMABLE
+    name: 消耗品类规则
+    priority: 10
+    matchers:
+      - type: keyword
+        logic: any
+        values: ["纸", "笔", "墨水", "电池", "燃料", "胶水", "绳子", "清洁剂", "消毒液"]
+
+  - category: VEHICLE
+    name: 交通工具类规则
+    priority: 10
+    matchers:
+      - type: keyword
+        logic: any
+        values: ["汽车", "自行车", "摩托车", "飞机", "火车", "船", "公交", "地铁", "车辆", "驾驶"]
+
+# 默认分类
+default_category: OTHER
+
+# AI分类配置
+ai:
+  enabled: true
+  provider: "minimax"  # claude, openai, minimax
+  endpoint: "https://api.minimax.chat"  # 自定义 API 端点（不含 /v1）
+  api_key: "sk-cp-Ob-agizc1tNupbOVEpiK0X3j4KCCAaGt_pIgwRt7cR8ZIfEONKuWkgVNkLXFxE7HFDVJvyH-g4dMPW9IzeB_BhG900URx4OKjXcijT5-uIP3CsMTo7s-d1g"  # MiniMax API Key
+  model: "MiniMax-Text-01"
+  max_retries: 2
+  timeout: 30
+
+# 缓存配置
+cache:
+  enabled: true
+  max_size: 1000
+  ttl: 3600  # 秒
