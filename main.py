@@ -3,6 +3,12 @@
 问题分类系统入口
 """
 
+import sys
+import os
+
+# 将父目录添加到 sys.path，以便导入 router 包
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import json
 from router.core.classifier import Classifier
 from router.models.category import Category

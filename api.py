@@ -3,6 +3,12 @@
 FastAPI 接口服务
 """
 
+import sys
+import os
+
+# 将父目录添加到 sys.path，以便导入 router 包
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import json
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware

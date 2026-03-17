@@ -10,7 +10,12 @@
       "Bash(MINIMAX_API_KEY=\"sk-cp-Ob-agizc1tNupbOVEpiK0X3j4KCCAaGt_pIgwRt7cR8ZIfEONKuWkgVNkLXFxE7HFDVJvyH-g4dMPW9IzeB_BhG900URx4OKjXcijT5-uIP3CsMTo7s-d1g\" python3 -m router.main 2>&1 | head -50)",
       "Bash(MINIMAX_API_KEY=\"sk-cp-Ob-agizc1tNupbOVEpiK0X3j4KCCAaGt_pIgwRt7cR8ZIfEONKuWkgVNkLXFxE7HFDVJvyH-g4dMPW9IzeB_BhG900URx4OKjXcijT5-uIP3CsMTo7s-d1g\" python3 -m router.main 2>&1 | head -30)",
       "Bash(pip show fastapi 2>/dev/null | head -5)",
-      "Bash(pip show uvicorn 2>/dev/null | head -5)"
+      "Bash(pip show uvicorn 2>/dev/null | head -5)",
+      "Bash(python3 main.py)",
+      "Bash(sleep 2 && curl -s http://localhost:8080/)",
+      "Bash(curl -s -X POST http://localhost:8080/classify -H \"Content-Type: application/json\" -d '{\"question\": \"这个盒子用什么材料做的？\"}')",
+      "Bash(pkill -f \"python3 api.py\")",
+      "Bash(lsof -ti:8080 | xargs kill -9 2>/dev/null || echo \"没有进程在运行\")"
     ]
   }
 }
