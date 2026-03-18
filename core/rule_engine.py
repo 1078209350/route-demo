@@ -3,8 +3,8 @@ import yaml
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 
-from router.models.category import Category
-from router.utils.logger import get_logger
+from models.category import Category
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

@@ -15,7 +15,8 @@
       "Bash(sleep 2 && curl -s http://localhost:8080/)",
       "Bash(curl -s -X POST http://localhost:8080/classify -H \"Content-Type: application/json\" -d '{\"question\": \"这个盒子用什么材料做的？\"}')",
       "Bash(pkill -f \"python3 api.py\")",
-      "Bash(lsof -ti:8080 | xargs kill -9 2>/dev/null || echo \"没有进程在运行\")"
+      "Bash(lsof -ti:8080 | xargs kill -9 2>/dev/null || echo \"没有进程在运行\")",
+      "Bash(cd:*)"
     ]
   }
 }

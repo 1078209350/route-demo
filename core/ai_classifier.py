@@ -6,8 +6,8 @@ from typing import Optional, Dict, Any
 from pathlib import Path
 from collections import OrderedDict
 
-from router.models.category import Category
-from router.utils.logger import get_logger
+from models.category import Category
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

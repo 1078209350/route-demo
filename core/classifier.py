@@ -1,10 +1,10 @@
 from typing import Optional
 from pathlib import Path
 
-from router.models.category import Category
-from router.core.rule_engine import RuleEngine
-from router.core.ai_classifier import AIClassifier
-from router.utils.logger import get_logger
+from models.category import Category
+from core.rule_engine import RuleEngine
+from core.ai_classifier import AIClassifier
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

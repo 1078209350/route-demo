@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
-from router.core.classifier import Classifier
+from core.classifier import Classifier
 
 app = FastAPI(title="问题分类API", version="1.0.0")
 

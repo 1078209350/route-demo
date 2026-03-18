@@ -10,8 +10,8 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import json
-from router.core.classifier import Classifier
-from router.models.category import Category
+from core.classifier import Classifier
+from models.category import Category
 
 
 def main():
